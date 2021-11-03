@@ -7,3 +7,7 @@ Computational pathology provides accurate tools for defining the intra-tumoral e
 Sincerely yours,
 
 HistoML team.
+
+
+
+I change the location of the whole project. Check if it works.
