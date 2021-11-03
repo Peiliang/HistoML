@@ -14,7 +14,7 @@ HistoML [ontology specification](https://github.com/BioPAX/specification/tree/ma
 
 Representation Examples
 
-- [Rhabdoid Cells](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation%20Examples/Rhabdoid%20cells%20in%20RCC%20(renal%20cell%20carcinoma))
+- [Rhabdoid Cells](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation_Examples/Rhabdoid_cells)
 - Alveolar Pattern
 - Tumors Extending into Renal Sinus
 - Subtyping Process
