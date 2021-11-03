@@ -2,10 +2,10 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
 	xmlns:owl="http://www.w3.org/2002/07/owl#" 
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    xmlns:histo="https://raw.githubusercontent.com/Peiliang/HistoML/master/Specification/Level1/Ontology_Specification/HistoML-level1.owl#"
+    xmlns:histo="https://raw.githubusercontent.com/Eurekwah/HistoML/master/HistoML.owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	<owl:Ontology rdf:about="">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/Peiliang/HistoML/master/Specification/Level1/Ontology_Specification/HistoML-level1.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/Eurekwah/HistoML/master/HistoML.owl"/>
     </owl:Ontology>
 
 	
