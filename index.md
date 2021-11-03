@@ -25,7 +25,7 @@ Use Cases
 - Population-based comparison between nuclear morphologic parameters and ISUP grades
 - Automatic Diagnosis and Evaluation
 
-Histp
+Histpathology Ontology
 
 
 
