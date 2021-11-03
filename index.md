@@ -10,7 +10,7 @@ Computational pathology provides accurate tools for defining the intra-tumoral e
 
 ## Links
 
-HistoML [ontology specification](https://github.com/BioPAX/specification/tree/master/Level3/specification) and [documentation](https://github.com/BioPAX/specification/tree/master/Level3/docs)
+HistoML [ontology specification](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Ontology_Specification) and [documentation](https://github.com/BioPAX/specification/tree/master/Level3/docs)
 
 Representation Examples
 
