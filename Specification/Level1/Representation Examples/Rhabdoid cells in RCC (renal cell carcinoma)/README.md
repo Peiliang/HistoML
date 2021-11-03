@@ -2,4 +2,4 @@
 
 For ease reference, the rhabdoid cells represented in the exemplar HistoML representation  are numbered in this figure. The values of their ‘rdf:ID’ are correspondingly “Rhabdoid_Cell1”, “Rhabdoid_Cell2” and “Rhabdoid_Cell3” etc. Readers could easily find the corresponding individuals of ‘NeoplasticCell’ to access the represented features (e.g. quantitative information of their properties).
 
-![image-20211103111240205](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211103111240205.png)
+![image-20211103111240205](https://github.com/Peiliang/HistoML/blob/master/Specification/Level1/Representation%20Examples/Rhabdoid%20cells%20in%20RCC%20(renal%20cell%20carcinoma)/Rhabdoid%20Cells.png)
