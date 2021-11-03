@@ -1,37 +1,55 @@
-## Welcome to GitHub Pages
+# Histopathology Markup Language (HistoML)
 
-You can use the [editor on GitHub](https://github.com/Peiliang/HistoML/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Brief Introduction
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Computational pathology provides accurate tools for defining the intra-tumoral ecological spatial context, having substantial implications for cancer research and medicine. However, the large-scale implementation of computational pathology has been hindered by the lack of a common information standard to represent various histopathological features. Here we propose Histopathology Markup Language (HistoML) Level 1 for comprehensively and precisely representing various histopathological features, including histopathological phenotypes, their individual components as well as diagnosing logics of pathologists at multiple levels of detail, in a machine-understandable format. We pilot HistoML in representing histopathological features of several neoplastic diseases and exemplify computational analyses on the representations. The representation files and the source code of these uses cases, as well as the ontology specification and documentation of HistoML, are available in this website.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Links
 
-1. Numbered
-2. List
+HistoML [ontology specification](https://github.com/BioPAX/specification/tree/master/Level3/specification) and [documentation](https://github.com/BioPAX/specification/tree/master/Level3/docs)
 
-**Bold** and _Italic_ and `Code` text
+Representation Examples
 
-[Link](url) and ![Image](src)
+- Rhabdoid Cells
+- Alveolar Pattern
+- Tumors Extending into Renal Sinus
+- Subtyping Process
+
+Use Cases
+
+- Quantification of Tumor-immune phenotype
+- Population-based comparison between nuclear morphologic parameters and ISUP grades
+- Automatic Diagnosis and Evaluation
+
+Histp
+
+
+
+## "Hello World" example
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:histo="http://www.semanticweb.org/release/HistoML1.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.semanticweb.org/release/HistoML1.owl"/>
+    </owl:Ontology>
+	<histo:NeoplasticCell rdf:ID="Hello_World_Cell">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello World</histo:displayName>
+	</histo:NeoplasticCell>
+</rdf:RDF>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Peiliang/HistoML/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## HistoML Team
 
-### Support or Contact
+[Chen Li's group](http://www.chenli.group/home)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
