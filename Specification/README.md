@@ -4,6 +4,16 @@ Computational pathology provides accurate tools for defining the intra-tumoral e
 
 
 
-Sincerely yours,
+## Short guideline for how to use Protégé
 
-HistoML team.
+**It is recommended to view the ontology specification of HistoML (i.e. HistoML.owl ), all the example HistoML representations and Histopathology Ontology via Protégé.**
+
+Protégé is a free, open-source ontology editor.
+
+Download and install Protege Desktop from the [Protege website](http://protege.stanford.edu/products.php#desktop-protege).
+
+Follow the [step-by-step instructions to install Protege](http://protegeproject.github.io/protege/installation).
+
+[Useful resources](http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial/) for you to learn how to use Protégé.
+
+We upload the PDF version of Protégé tutorial in this repository in case you find it difficult to download it elsewhere.
