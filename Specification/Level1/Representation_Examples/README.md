@@ -18,9 +18,6 @@ Normally, Protégé would successfully open these files. However, since opening 
 
 ![image-20211105093951604](https://github.com/Peiliang/HistoML/blob/master/Specification/Level1/Representation_Examples/image-20211105093951604.png)
 
-<img src="https://github.com/Peiliang/HistoML/blob/master/Specification/Level1/Representation_Examples/image-20211105093951604.png" alt="image-20211101092350869" style="zoom:33%;" />
-
-
 ![img](https://github.com/Peiliang/HistoML/blob/master/Specification/Level1/Representation_Examples/%7B5A4437AC-0105-8CB7-14FD-DE63758DFEFD%7D.png)
 
 To correctly open the example representations, please click **是(N)** and manually point Protégé to a location where the HistoML.owl can be found in your computer.
