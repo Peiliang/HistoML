@@ -22,8 +22,9 @@ Representation Examples
 Use Cases
 
 - Quantification of Tumor-immune phenotype
-- Population-based comparison between nuclear morphologic parameters and ISUP grades
+- Population-based comparison analysis between nuclear morphologic parameters and ISUP grades
 - Automatic Diagnosis and Evaluation
+- Computational Model for Nuclei Segmentation and Grading 
 
 [Histpathology Ontology](https://github.com/Peiliang/HistoML/tree/master/Histopathology%20Ontology)
 
