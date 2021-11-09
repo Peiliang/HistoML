@@ -25,7 +25,7 @@ Use Cases
 - Population-based comparison between nuclear morphologic parameters and ISUP grades
 - Automatic Diagnosis and Evaluation
 
-Histpathology Ontology
+[Histpathology Ontology](https://github.com/Peiliang/HistoML/tree/master/Histopathology%20Ontology)
 
 
 
