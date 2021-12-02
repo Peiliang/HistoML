@@ -22,25 +22,25 @@ Install all requirements for python:
 pip3 install -r requirements.txt
 ```
 
-Download model files from [here](https://drive.google.com/file/d/11S064aegdil-CI-SdYk0DHp2n7d2Nv-8/view?usp=sharing) and extract all files into micronet folder.
+CCRCC Nuclei Grading Dataset can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks. Extract the "Images" and "Labels" folders into "Dataset" folder.
 
 Run the use case:
 
 ```shell
-python3 Execute.py Example.png area diameter circularity entropy
+python3 Execute.py area diameter circularity entropy
 ```
 
-CCRCC Nuclei Grading Dataset can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks. Area, diameter, circularity and entropy are 4 parameters calculated for each cell.
+Representation files will be generated in the "Representation" folder. Area, diameter, circularity and entropy are 4 parameters calculated for each cell.
 
 CUDA environment and Java 11 runtime is required to run the queries.
 
 #### Example Output
 
 > average area:
-> grade 1 (15): 407.133333
-> grade 2 (1): 225.000000
-> grade 3 (10): 857.800000
-> endothelial (5): 125.400000
+> grade 1 (45120): 346.531272
+> grade 2 (6407): 566.327923
+> grade 3 (2780): 809.073741
+> endothelial (16691): 293.694566
 
-This means that the average nucleolus area of all 15 grade 1 cells is 407 pixels, etc.
+This means that the average nucleolus area of all 45120 grade 1 cells is 346.5 pixels, etc.
 

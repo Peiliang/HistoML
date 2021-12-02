@@ -1,10 +1,13 @@
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.apache.jena.atlas.io.IndentedWriter;
+import org.apache.jena.atlas.json.JsonArray;
+import org.apache.jena.base.Sys;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.RDFDataMgr;
@@ -39,23 +42,29 @@ public class Search {
         Template template = cfg.getTemplate("Template.xml");
 
         ObjectMapper objectMapper = new ObjectMapper();
-        ArrayNode root = (ArrayNode) objectMapper.readTree(new File("CellData.json"));
-        List<CellProp> cellProps = new ArrayList<>();
-        List<Integer> regions = new ArrayList<>();
-        Map<String, Object> dataModel = new HashMap<>();
-        for (Iterator<JsonNode> iter = root.elements(); iter.hasNext(); ) {
-            ArrayNode array = (ArrayNode) iter.next();
-            CellProp prop = new CellProp(array);
-            cellProps.add(prop);
-            regions.add(prop.grade);
+        ObjectNode root = (ObjectNode) objectMapper.readTree(new File("CellData.json"));
+        Map<String, List<CellProp>> cellPropMap = new HashMap<>();
+        Map<String, List<Integer>> regionMap = new HashMap<>();
+        for (Iterator<Map.Entry<String, JsonNode>> iter = root.fields(); iter.hasNext(); ) {
+            Map.Entry<String, JsonNode> entry = iter.next();
+            ArrayNode slide = (ArrayNode) entry.getValue();
+            List<CellProp> cellProps = new ArrayList<>();
+            List<Integer> regions = new ArrayList<>();
+            for (Iterator<JsonNode> iter2 = slide.elements(); iter2.hasNext(); ) {
+                ArrayNode array = (ArrayNode) iter2.next();
+                CellProp prop = new CellProp(array);
+                cellProps.add(prop);
+                regions.add(prop.grade);
+            }
+            cellPropMap.put(entry.getKey(), cellProps);
+            regionMap.put(entry.getKey(), regions);
+
+            Map<String, Object> dataModel = new HashMap<>();
+            dataModel.put("id", entry.getKey());
+            dataModel.put("regions", regions);
+            template.process(dataModel, new FileWriter("Representation/" + entry.getKey() + ".xml"));
         }
 
-        dataModel.put("id", "Slide");
-        dataModel.put("regions", regions);
-        template.process(dataModel, new FileWriter("Representation.xml"));
-
-        int[] cnt = new int[4];
-        double[] area = new double[4], major_axis = new double[4], circularity = new double[4], entropy = new double[4];
         String[] queries = new String[] {
                 FileUtils.readWholeFileAsUTF8("Grade1.rq"),
                 FileUtils.readWholeFileAsUTF8("Grade2.rq"),
@@ -63,43 +72,50 @@ public class Search {
                 FileUtils.readWholeFileAsUTF8("Endothelial.rq")
         };
 
-        model.read(RDFDataMgr.open("Representation.xml"), null);
-        if (debug) print(model);
+        int[] cnt = new int[4];
+        double[] area = new double[4], major_axis = new double[4], circularity = new double[4], entropy = new double[4];
+        for (Iterator<Map.Entry<String, JsonNode>> iter = root.fields(); iter.hasNext(); ) {
+            Map.Entry<String, JsonNode> entry = iter.next();
 
-        for (List<RDFNode> data : execQuery("grade 1", queries[0])) {
-            cnt[0]++;
-            CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
-            area[0] += prop.area;
-            major_axis[0] += prop.major_axis;
-            circularity[0] += prop.circularity;
-            entropy[0] += prop.entropy;
-        }
+            model.read(RDFDataMgr.open("Representation/" + entry.getKey() + ".xml"), null);
+            List<CellProp> cellProps = cellPropMap.get(entry.getKey());
+            for (List<RDFNode> data : execQuery("grade 1", queries[0])) {
+                cnt[0]++;
+                CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
+                area[0] += prop.area;
+                major_axis[0] += prop.major_axis;
+                circularity[0] += prop.circularity;
+                entropy[0] += prop.entropy;
+            }
 
-        for (List<RDFNode> data : execQuery("grade 2", queries[1])) {
-            cnt[1]++;
-            CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
-            area[1] += prop.area;
-            major_axis[1] += prop.major_axis;
-            circularity[1] += prop.circularity;
-            entropy[1] += prop.entropy;
-        }
+            for (List<RDFNode> data : execQuery("grade 2", queries[1])) {
+                cnt[1]++;
+                CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
+                area[1] += prop.area;
+                major_axis[1] += prop.major_axis;
+                circularity[1] += prop.circularity;
+                entropy[1] += prop.entropy;
+            }
 
-        for (List<RDFNode> data : execQuery("grade 3", queries[2])) {
-            cnt[2]++;
-            CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
-            area[2] += prop.area;
-            major_axis[2] += prop.major_axis;
-            circularity[2] += prop.circularity;
-            entropy[2] += prop.entropy;
-        }
+            for (List<RDFNode> data : execQuery("grade 3", queries[2])) {
+                cnt[2]++;
+                CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
+                area[2] += prop.area;
+                major_axis[2] += prop.major_axis;
+                circularity[2] += prop.circularity;
+                entropy[2] += prop.entropy;
+            }
 
-        for (List<RDFNode> data : execQuery("endothelial", queries[3])) {
-            cnt[3]++;
-            CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
-            area[3] += prop.area;
-            major_axis[3] += prop.major_axis;
-            circularity[3] += prop.circularity;
-            entropy[3] += prop.entropy;
+            for (List<RDFNode> data : execQuery("endothelial", queries[3])) {
+                cnt[3]++;
+                CellProp prop = cellProps.get(Integer.parseInt(data.get(0).toString().replaceAll(",", "")) - 1);
+                area[3] += prop.area;
+                major_axis[3] += prop.major_axis;
+                circularity[3] += prop.circularity;
+                entropy[3] += prop.entropy;
+            }
+
+            model.removeAll();
         }
 
         for (String query : args) {
