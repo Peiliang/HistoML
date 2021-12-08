@@ -6,7 +6,7 @@ Computational pathology provides accurate tools for defining the intra-tumoral e
 
 ## Short guideline for how to use Protégé
 
-**It is recommended to view .owl files via Protégé.**
+**It is recommended to view .owl and .xml files in this repository via Protégé.**
 
 Protégé is a free, open-source ontology editor.
 
