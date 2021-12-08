@@ -14,7 +14,7 @@ Subtyping_Process.xml;
 
 It is recommend to view these files via Protégé. Click on the **File** menu, choose **Open**, find and select the example representations you want to view in Protégé. 
 
-Normally, Protégé would successfully open these files. However, since opening the files involves importing an external ontology (i.e. HistoML.owl) by the owl:imports property, Protégé may fail to find the imported ontology on some occasions (e.g. Internet issues). In this case Protégé will generate a dialog illustrating this error looking like this:
+Normally, Protégé would successfully open these files. However, since opening the files involves importing an external ontology (i.e. HistoML.owl) by the owl:imports property, Protégé may fail to find the imported ontology on some occasions (e.g. internet issues). In this case Protégé will generate a dialog illustrating this error looking like this:
 
 ![image-20211105093951604](https://github.com/Peiliang/HistoML/blob/master/Specification/Level1/Representation_Examples/image-20211105093951604.png)
 
