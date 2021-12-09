@@ -1,6 +1,6 @@
 ## Automatic Diagnosis Evaluation
 
-This use case demonstrates how to automatically evaluate whether a diagnosis represented in a HistoML representation comforms to the corresponding diagnostic criterion.
+This use case demonstrates how to automatically evaluate whether a diagnosis represented in a HistoML representation conforms to the corresponding diagnostic criterion.
 
 #### Important Files
 
