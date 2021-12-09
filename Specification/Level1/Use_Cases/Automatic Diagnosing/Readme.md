@@ -1,18 +1,18 @@
-## Automatic Diagnosis Evaluation
+## Automatic Diagnosis
 
-This use case demonstrates how to automatically give diagnosis with HistoML.
+This use case demonstrates how to automatically add a diagnosis to a HistoML representation base on a diagnostic criterion.
 
 #### Important Files
 
 HistoML.owl: Ontology for HistoML.
 
-Histopathology Ontology Simplified.owl: Histopathology ontology for disease diagnosis.
+Histopathology Ontology Simplified.owl: The logic of the diagnostic criterion is represented in Histopathology Ontology.
 
 Diagnosing.java: Source code of automatic diagnosis.
 
-Automatic Subtyping.xml: Diagnosis examples.
+Automatic Subtyping.xml: An example HistoML representation of a slide with several histopathological phenotypes detected while lacking a diagnosis of a certain diagnostic criterion.
 
-Automatic Subtyping Diagnosis.xml: Generated diagnosis result.
+Automatic Subtyping Diagnosis.xml: The generated diagnostic result.
 
 #### How to Use
 
@@ -22,11 +22,11 @@ Run the use case:
 java -jar Diagnosing.jar "Automatic Subtyping.xml"
 ```
 
-Java 11 runtime is required to run the queries.
+Java 11 runtime is required.
 
 #### Example Output
 
-Below is the example output for "Automatic Subtyping.xml":
+Below is an example output for "Automatic Subtyping.xml":
 
 > Diagnosis is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
@@ -40,5 +40,11 @@ Below is the example output for "Automatic Subtyping.xml":
 > * definition: Cells with mucinous cytoplasm constitute only 0-50% of the tumour.
 > * evidences: Quantitative_Metric1
 
-The output indicates that this case is Adenocarcinoma, HPV-associated, usual type, through the guideline provided by Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition, with supporting evidences Glandular_Pattern5, Glandular_Pattern4 and Quantitative_Metric1.
+Below is the explaination of the example output:
+The output is an illustration of a two-step reasoning process of ontology reasoner. 
+  1. Firstly, the reasoner subtypes the slide as **Human Papillomavirus-Related Endocervical Adenocarcinoma** whose evidences are the two histopathological phenotypes of the slide named "**Glandular_Pattern4**" and "**Glandular_Pattern5**" in Automatic Subtyping.xml; the official guideline on which the first step of reasoning is based is **Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition**, its isbn number is **9283245040** and the quotation is "Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification". 
+  2. Secondly,the reasoner subtypes the slide as **HPV-associated, usual type** with the evidences and citation of the guideline provided as well.
+
+#### Why using a simplified Histopathology Ontology instead of a complete one?
+Reasoning over a simplified Histopathology Ontology which contains only the necessary classes and axioms for automatic diagnosis is more time-efficient than a complete Histopathology Ontology through ontology reasoner.
 
