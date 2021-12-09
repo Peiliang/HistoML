@@ -4,8 +4,7 @@
 
 ## Brief Introduction
 
-Computational pathology provides accurate tools for defining the intra-tumoral ecological spatial context, having substantial implications for cancer research and medicine. However, the large-scale implementation of computational pathology has been hindered by the lack of a common information standard to represent various histopathological features. Here we propose Histopathology Markup Language (HistoML) Level 1 for comprehensively and precisely representing various histopathological features, including histopathological phenotypes, their individual components as well as diagnosing logics of pathologists at multiple levels of detail, in a machine-understandable format. We pilot HistoML in representing histopathological features of several neoplastic diseases and exemplify computational analyses on the representations. The representation files and the source code of these uses cases, as well as the ontology specification and documentation of HistoML, are available in this website.
-
+Computational pathology provides "big-data" approach to pathology, having substantial implications for cancer research and medicine. However, the large-scale implementation of computational pathology has been hindered by the lack of a standardized format representing various histopathological features in histopathology data. Here we propose Histopathology Markup Language (HistoML) and Histopathology Ontology for precisely representing various histopathological features in tumor, including histopathological phenotypes observed in whole-slide-images or individualized diagnosing logics and results collected from pathology reports at different granularity and in a machine-understandable format. We pilot HistoML in representing histopathological features contained in histopathology data of several neoplastic diseases and exemplify different uses of the representations. The example representation files, the source code of the uses cases, Histopathology Ontology, as well as the ontology specification and documentation of HistoML Level1 are available in this website.
 
 
 ## Links
@@ -21,10 +20,11 @@ Representation Examples
 
 Use Cases
 
-- Quantification of Tumor-immune phenotype
-- Population-based comparison analysis between nuclear morphologic parameters and ISUP grades
-- Automatic Diagnosis and Evaluation
-- Computational Model for Nuclei Segmentation and Grading 
+- [Tumor-Immune Phenotype Characterization](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Tumor-Immune%20Phenotype%20Characterization)
+- [Population-based Phenotype Characterization](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Population-based%20Prognosis%20Analysis)
+- [Automatic Diagnosis](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Diagnosing) 
+- [Automatic Diagnosis Evaluation](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Diagnosis%20Evaluation)
+- [Standardization of Computational Models](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Representation%20Generation) 
 
 [Histpathology Ontology](https://github.com/Peiliang/HistoML/tree/master/Histopathology%20Ontology)
 
