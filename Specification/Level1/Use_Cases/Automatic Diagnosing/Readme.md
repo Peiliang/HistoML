@@ -10,9 +10,9 @@ Histopathology Ontology Simplified.owl: The logic of the diagnostic criterion is
 
 Diagnosing.java: Source code of automatic diagnosis.
 
-Automatic Subtyping.xml: An example HistoML representation of a slide with several histopathological phenotypes detected while lacking a diagnosis of a certain diagnostic criterion.
+Automatic Subtyping.xml: The input HistoML representation of a slide with several histopathological phenotypes detected while lacking a diagnosis of a certain diagnostic criterion.
 
-Automatic Subtyping Diagnosis.xml: The HistoML representation which involves the generated diagnostic result.
+Automatic Subtyping Diagnosis.xml: The output HistoML representation of the slide which involves the generated diagnostic result.
 
 #### How to Use
 
