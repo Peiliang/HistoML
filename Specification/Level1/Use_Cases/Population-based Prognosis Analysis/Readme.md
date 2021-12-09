@@ -36,7 +36,7 @@ Java 11 runtime is required to run the queries.
 > grade 3 (2780): 809.073741
 > endothelial (16691): 293.694566
 
-This means that the average area of all grade 1 nucleoli is 346.5 pixels, etc.
+This means that the average area of all grade 1 nucleoli (45,102 in total) is 346.5 pixels, etc.
 
 The slides were scanned using a KFBIO scanner at 40x of which the resolution is 0.26 µm/pixel at 40x.
 
