@@ -75,12 +75,12 @@ Below is the example output for "Automatic Evaluation Intestinal Adenocarcinoma 
 
 
 
-The output indicates that there are 3 diagnoses for this case, i.e. Diagnosis1~3.
+The output indicates that the diagnostic process represented in the HistoML file contains three steps, i.e. Diagnosis1~3.
 
 Diagnosis1 states that this case is Cervical Adenocarcinoma, which is evaluated as true, through the guideline provided by Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition. There are two evidences that supports this diagnosis: Glandular_Pattern5 and Glandular_Pattern4.
 
-Similar to Diagnosis1, Diagnosis2 states that this case is Human Papillomavirus-Related Endocervical Adenocarcinoma, which is evaluated as true.
+Based on Diagnosis1, Diagnosis2 states that this case is Human Papillomavirus-Related Endocervical Adenocarcinoma, which is evaluated as true as well.
 
-Diagnosis3 states that this case is Adenocarcinoma, HPV-associated, intestinal type, which is evaluated as false, because the given evidences are not enough for ontology reasoner to yield the same diagnostic result. Instead, this reasoner subtypes this case as Adenocarcinoma, HPV-associated, mucinous type, with supporting evidences Glandular_Pattern5, Glandular_Pattern4 and Quantitative_Metric2.
+Diagnosis3 states that this case is Adenocarcinoma, HPV-associated, intestinal type, which is evaluated as false, because the given evidences are not enough for ontology reasoner to yield the same diagnostic result. Instead, this reasoner subtypes this case as Adenocarcinoma, HPV-associated, mucinous type.
 
-The output also shows diagnostic process of ontology reasoner for making each diagnosis to explain to users why the reasoner thinks that the diagnosis in HistoML representation is wrong or right.  
+The output shows the diagnostic process of ontology reasoner to explain to users why the reasoner thinks the diagnose is wrong or right.  
