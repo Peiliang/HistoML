@@ -1,6 +1,6 @@
-## Population-based Prognosis Analysis
+## Population-based Phenotype Characterization
 
-This use case demonstrates how to analyze large scale statistic data with HistoML.
+This use case demonstrates how to analyze histopathological features contained in whole-slide-images of large patient populations using HistoML.
 
 #### Important Files
 
@@ -16,7 +16,7 @@ Representation folder: HistoML representations in this use case.
 
 #### How to Use
 
-In this use cases, HistoML representation files in "Representation" folder are pre-generated from the CCRCC Nuclei Grading Dataset, which can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks.
+In this use cases, HistoML representations of ccRCC slides are in "Representation" folder. The original CCRCC Nuclei Grading Dataset can be downloaded from [here](https://dataset.chenli.group/home/ccrcc-grading). This dataset contains 1,000 512x512 images for CCRCC Nuclei Grading and Segmentation tasks.
 
 Run the use case:
 
@@ -36,5 +36,7 @@ Java 11 runtime is required to run the queries.
 > grade 3 (2780): 809.073741
 > endothelial (16691): 293.694566
 
-This means that the average nucleolus area of all 45120 grade 1 cells is 346.5 pixels, etc.
+This means that the average area of all grade 1 nucleoli is 346.5 pixels, etc.
+
+The slides were scanned using a KFBIO scanner at 40x of which the resolution is 0.26 µm/pixel at 40x.
 
