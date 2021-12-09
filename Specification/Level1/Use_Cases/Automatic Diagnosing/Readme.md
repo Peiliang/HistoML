@@ -4,7 +4,7 @@ This use case demonstrates how to automatically add a diagnosis to a HistoML rep
 
 #### Important Files
 
-HistoML.owl: Ontology for HistoML.
+HistoML.owl: Ontology specification of HistoML.
 
 Histopathology Ontology Simplified.owl: The logic of the diagnostic criterion is represented in Histopathology Ontology.
 
