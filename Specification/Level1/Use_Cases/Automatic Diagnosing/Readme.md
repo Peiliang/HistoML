@@ -26,7 +26,7 @@ Java 11 runtime is required.
 
 #### Example Output
 
-Below is an example output for "Automatic Subtyping.xml":
+Below is an example output of running the above code:
 
 > Diagnosis is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
