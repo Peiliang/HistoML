@@ -42,7 +42,7 @@ Below is an example output of running the above code:
 
 The output is an illustration of a two-step reasoning process of ontology reasoner. 
   1. Firstly, the reasoner subtypes the slide as **Human Papillomavirus-Related Endocervical Adenocarcinoma** whose evidences are the two histopathological phenotypes of the slide named "**Glandular_Pattern4**" and "**Glandular_Pattern5**" in Automatic Subtyping.xml; the official guideline on which the first step of reasoning is based is **Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition**, its isbn number is **9283245040** and the quotation is "Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification". 
-  2. Based on the diagnostic result of the first step,the reasoner subtypes the slide as **HPV-associated, usual type** with the evidences and citation of the guideline provided as well.
+  2. Based on the diagnostic result of the first step, the reasoner subtypes the slide as **HPV-associated, usual type** with the evidences and citation of the guideline provided as well.
 
 #### Why using a simplified Histopathology Ontology instead of a complete one?
 Reasoning over a simplified Histopathology Ontology which contains only the necessary classes and axioms for automatic diagnosis is more time-efficient than a complete Histopathology Ontology through ontology reasoner.
