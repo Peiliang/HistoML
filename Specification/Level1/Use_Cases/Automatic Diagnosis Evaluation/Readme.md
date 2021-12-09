@@ -35,7 +35,7 @@ Below is the example output for "Automatic Evaluation Intestinal Adenocarcinoma 
 > Diagnosis1 is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
 > - identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
-> - definition: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
+> - quotation: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
 > - evidences: Glandular_Pattern5 Glandular_Pattern4
 >
 > ---
@@ -49,7 +49,7 @@ Below is the example output for "Automatic Evaluation Intestinal Adenocarcinoma 
 > Diagnosis2 is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
 > - identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
-> - definition: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
+> - quotation: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
 > - evidences: Glandular_Pattern5 Glandular_Pattern4
 >
 > ---
@@ -63,23 +63,24 @@ Below is the example output for "Automatic Evaluation Intestinal Adenocarcinoma 
 > Diagnosis3 is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
 > - identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
-> - definition: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
+> - quotation: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
 > - evidences: Glandular_Pattern5 Glandular_Pattern4
 >
 > Diagnosis3 is Adenocarcinoma, HPV-associated, mucinous type
 >
 > - identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
 >
-> - definition: This type accounts for ~10% of all endocervical adenocarcinoma. There is intracytoplasmic mucin in  ≥ 50% of cells, typically with a minor component of usual adenocarcinoma.
+> - quotation: This type accounts for ~10% of all endocervical adenocarcinoma. There is intracytoplasmic mucin in  ≥ 50% of cells, typically with a minor component of usual adenocarcinoma.
 > - evidences: Quantitative_Metric2
 
 
 
 The output indicates that there are 3 diagnoses for this case, i.e. Diagnosis1~3.
 
-Diagnosis1 states that this case is Cervical Adenocarcinoma, which is evaluated as true, through the guideline provided by Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition. There are two evidences that supports this claim: Glandular_Pattern5 and Glandular_Pattern4.
+Diagnosis1 states that this case is Cervical Adenocarcinoma, which is evaluated as true, through the guideline provided by Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition. There are two evidences that supports this diagnosis: Glandular_Pattern5 and Glandular_Pattern4.
 
 Similar to Diagnosis1, Diagnosis2 states that this case is Human Papillomavirus-Related Endocervical Adenocarcinoma, which is evaluated as true.
 
-Diagnosis3 states that this case is Adenocarcinoma, HPV-associated, intestinal type, which is evaluated as false, because given evidences are not enough to yield this result. Instead, this case is shown to be Adenocarcinoma, HPV-associated, mucinous type, with supporting evidences Glandular_Pattern5, Glandular_Pattern4 and Quantitative_Metric2.
+Diagnosis3 states that this case is Adenocarcinoma, HPV-associated, intestinal type, which is evaluated as false, because the given evidences are not enough for ontology reasoner to yield the same diagnostic result. Instead, this reasoner subtypes this case as Adenocarcinoma, HPV-associated, mucinous type, with supporting evidences Glandular_Pattern5, Glandular_Pattern4 and Quantitative_Metric2.
 
+The output also shows diagnostic process of ontology reasoner for making each diagnosis to explain to users why the reasoner thinks that the diagnosis in HistoML representation is wrong or right.  
