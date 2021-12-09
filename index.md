@@ -21,10 +21,10 @@ Representation Examples
 Use Cases
 
 - [Tumor-Immune Phenotype Characterization](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Tumor-Immune%20Phenotype%20Characterization)
-- [Population-based Phenotype Characterization](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Population-based%20Prognosis%20Analysis)
+- [Population-based Phenotype Characterization](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Population-based%20Phenotype%20Characterization)
 - [Automatic Diagnosis](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Diagnosing) 
 - [Automatic Diagnosis Evaluation](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Diagnosis%20Evaluation)
-- [Standardization of Computational Models](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Automatic%20Representation%20Generation) 
+- [Standardization of Computational Models](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Use_Cases/Standardization%20of%20Computational%20Models) 
 
 [Histpathology Ontology](https://github.com/Peiliang/HistoML/tree/master/Histopathology%20Ontology)
 
