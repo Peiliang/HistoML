@@ -31,13 +31,13 @@ Below is an example output of running the above code:
 > Diagnosis is Human Papillomavirus-Related Endocervical Adenocarcinoma
 >
 > * identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
-> * definition: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
+> * quotation: Hallmarks of HPV-associated endocervical adenocarcinoma architecture include apical mitoses and karyorrhexis, conspicuous and identifiable at low-power magnification.
 > * evidences: Glandular_Pattern5 Glandular_Pattern4
 >
 > Diagnosis is Adenocarcinoma, HPV-associated, usual type
 >
 > * identifier: 9283245040, title: Female Genital Tumours: WHO Classification of Tumours (Medicine) 5th Edition
-> * definition: Cells with mucinous cytoplasm constitute only 0-50% of the tumour.
+> * quotation: Cells with mucinous cytoplasm constitute only 0-50% of the tumour.
 > * evidences: Quantitative_Metric1
 
 The output is an illustration of a two-step reasoning process of ontology reasoner. 
