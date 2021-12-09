@@ -12,7 +12,7 @@ Analysis.java: Source code of generating HistoML representations and run Sparql 
 
 Execute.py: Execute the use case.
 
-Representation folder: HistoML representations in this use case.
+Representation folder: HistoML representations used in this use case.
 
 #### How to Use
 
@@ -24,7 +24,7 @@ Run the use case:
 java -jar Analysis.jar area diameter circularity entropy
 ```
 
-Area, diameter, circularity and entropy are 4 parameters calculated for each cell.
+Area, diameter, circularity and entropy are calculated for the nucleolus of each ccRCC tumor cell.
 
 Java 11 runtime is required to run the queries.
 
