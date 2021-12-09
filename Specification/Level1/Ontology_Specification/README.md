@@ -1,1 +1,1 @@
-This is the ontology specification of HistoML Leve1. It is recommeded to open and access it via Protégé.
+This is the ontology specification of HistoML Leve1. It is recommended to open and access this file via Protégé.
