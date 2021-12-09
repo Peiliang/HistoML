@@ -1,6 +1,6 @@
 ## Automatic Diagnosis
 
-This use case demonstrates how to automatically add a diagnosis to a HistoML representation base on a diagnostic criterion.
+This use case demonstrates how to automatically add a diagnosis to a HistoML representation based on a diagnostic criterion.
 
 #### Important Files
 
