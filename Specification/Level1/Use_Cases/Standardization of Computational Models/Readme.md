@@ -12,7 +12,7 @@ Execute.py: Execute the use case.
 
 Example.png: An example input of the nuclei segmentation and grading model.
 
-Representation.xml: HistoML representation translated from the prediction of the model by processing Example.png.
+Representation.xml: HistoML representation translated from the prediction of the model processing Example.png.
 
 #### How to Use
 
