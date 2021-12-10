@@ -21,7 +21,7 @@ import java.util.*;
 public class Search {
     public static Model model = ModelFactory.createDefaultModel();
     public static String histoPrefix = "https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl";
-    private static final boolean debug = false;
+    private static final boolean debug = false, generate = false;
 
     public static void transform(String[] args) throws IOException, TemplateException {
         histoPrefix = "https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl";
@@ -37,14 +37,16 @@ public class Search {
             }
         }
 
-        Configuration cfg = new Configuration(Configuration.VERSION_2_3_31);
-        cfg.setDirectoryForTemplateLoading(new File("."));
-        Template template = cfg.getTemplate("Template.xml");
+        Template template = null;
+        if (generate) {
+            Configuration cfg = new Configuration(Configuration.VERSION_2_3_31);
+            cfg.setDirectoryForTemplateLoading(new File("."));
+            template = cfg.getTemplate("Template.xml");
+        }
 
         ObjectMapper objectMapper = new ObjectMapper();
         ObjectNode root = (ObjectNode) objectMapper.readTree(new File("CellData.json"));
         Map<String, List<CellProp>> cellPropMap = new HashMap<>();
-        Map<String, List<Integer>> regionMap = new HashMap<>();
         for (Iterator<Map.Entry<String, JsonNode>> iter = root.fields(); iter.hasNext(); ) {
             Map.Entry<String, JsonNode> entry = iter.next();
             ArrayNode slide = (ArrayNode) entry.getValue();
@@ -57,12 +59,13 @@ public class Search {
                 regions.add(prop.grade);
             }
             cellPropMap.put(entry.getKey(), cellProps);
-            regionMap.put(entry.getKey(), regions);
 
-            Map<String, Object> dataModel = new HashMap<>();
-            dataModel.put("id", entry.getKey());
-            dataModel.put("regions", regions);
-            template.process(dataModel, new FileWriter("Representation/" + entry.getKey() + ".xml"));
+            if (generate) {
+                Map<String, Object> dataModel = new HashMap<>();
+                dataModel.put("id", entry.getKey());
+                dataModel.put("regions", regions);
+                template.process(dataModel, new FileWriter("Representation/" + entry.getKey() + ".xml"));
+            }
         }
 
         String[] queries = new String[] {

@@ -4,8 +4,6 @@ This use case demonstrates how to analyze histopathological features contained i
 
 #### Important Files
 
-Template.xml: Template to generate HistoML representation files.
-
 Grade1~3.rq & Endothelial.rq: Sparql queries for 4 types of cells.
 
 Analysis.java: Source code of generating HistoML representations and run Sparql queries.

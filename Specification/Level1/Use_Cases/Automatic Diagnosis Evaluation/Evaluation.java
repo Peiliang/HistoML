@@ -151,6 +151,7 @@ public class Deduction {
             OWLClass subtyping = dataFactory.getOWLClass("http://www.aipath.com/histo/histo.owl#Subtyping");
             OWLClass uniXref = dataFactory.getOWLClass("http://www.aipath.com/histo/histo.owl#UnificationXref");
 
+            System.out.println("The diagnosis process of ontology reasoner:");
             List<DiseaseNode> diseases = searchDisease(diagnosisClazz);
             OWLClass diseaseClass = diseases.get(diseases.size() - 1).diseaseClazz;
             OWLClass XrefClass = dataFactory.getOWLClass(diagnosisIRI + "#UnificationXref_Diagnosis");
@@ -182,6 +183,8 @@ public class Deduction {
                 diagnosisResults.put(owlClazz, diseaseClass);
                 boolean right = mergedReasoner.getSuperClasses(owlClazz).containsEntity(diseaseClass);
                 System.out.printf("%s is %s : %s\n", getLabel(owlClazz), getLabel(diseaseClass), right);
+                System.out.println("-----------------------------------------------------------------");
+                System.out.println("The diagnosis process of ontology reasoner:");
                 searchDisease(owlClazz);
                 System.out.println();
             }
@@ -292,7 +295,7 @@ public class Deduction {
         if (disease.identifier != 0 && superClasses.containsEntity(disease.diseaseClazz)) {
             System.out.printf("%s is %s\n", getLabel(owlClass), getLabel(disease.diseaseClazz));
             System.out.printf("\tidentifier: %d, title: %s\n", disease.identifier, disease.title);
-            System.out.printf("\tdefinition: %s\n", disease.definition);
+            System.out.printf("\tquotation: %s\n", disease.definition);
             diseases.add(disease);
             if (!evidences.isEmpty()) {
                 System.out.print("\tevidences: ");
