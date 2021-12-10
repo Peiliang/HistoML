@@ -9,7 +9,7 @@ Computational pathology provides "big-data" approach to pathology, having substa
 
 ## Links
 
-HistoML [ontology specification](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Ontology_Specification) and [documentation](https://github.com/BioPAX/specification/tree/master/Level3/docs)
+HistoML [ontology specification](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Ontology_Specification) and [documentation](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Documentation)
 
 Representation Examples
 
