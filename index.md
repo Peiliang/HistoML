@@ -36,12 +36,12 @@ Use Cases
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
 	xmlns:owl="http://www.w3.org/2002/07/owl#" 
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    xmlns:histo="http://www.semanticweb.org/release/HistoML1.owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:histo="http://www.semanticweb.org/release/HistoML1.owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	<owl:Ontology rdf:about="">
-        <owl:imports rdf:resource="http://www.semanticweb.org/release/HistoML1.owl"/>
-    </owl:Ontology>
+        	<owl:imports rdf:resource="http://www.semanticweb.org/release/HistoML1.owl"/>
+	</owl:Ontology>
 	<histo:NeoplasticCell rdf:ID="Hello_World_Cell">
 		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello World</histo:displayName>
 	</histo:NeoplasticCell>
