@@ -1,4 +1,4 @@
-We provide four example representations here:
+We provide three example representations here:
 
 Alveolar_Pattern.xml;
 
