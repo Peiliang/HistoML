@@ -6,8 +6,6 @@ Rhabdoid_Feature.xml;
 
 Tumor_Extends_into_Renal_Sinus.xml;
 
-Subtyping_Process.xml;
-
 
 
 ## A guide to view these representations
