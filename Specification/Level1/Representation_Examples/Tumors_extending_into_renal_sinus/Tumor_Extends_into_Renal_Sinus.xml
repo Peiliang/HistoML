@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:histo="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl"/>
+    </owl:Ontology>
+
+
+    <!--Phenotype -->
+    <histo:Architectural_Pattern rdf:ID="Tumor_Extension_into_Renal_Sinus">
+        <histo:hasXref rdf:resource="#UnificationXref_Tumor_Extension_into_Renal_Sinus"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Extension into Renal Sinus</histo:displayName>
+        <histo:present_Entity rdf:resource="#Renal_Sinus"/>
+        <histo:present_Entity rdf:resource="#Tumor1"/>
+        <histo:present_Entity rdf:resource="#Tumor2"/>
+        <histo:hasRelationship rdf:resource="#Relationship1"/>
+    </histo:Architectural_Pattern>
+    <histo:Architectural_Pattern rdf:ID="Tumor_Extension_into_Segmental_Branches_of_Renal_Vein">
+        <histo:hasXref rdf:resource="#UnificationXref_Tumor_Extension_into_Segmental_Branches_of_Renal_Vein"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Extension into Segmental Branches of Renal Vein</histo:displayName>
+        <histo:present_Entity rdf:resource="#Renal_Vein1"/>
+        <histo:present_Entity rdf:resource="#Tumor2"/>
+        <histo:hasRelationship rdf:resource="#Relationship2"/>
+    </histo:Architectural_Pattern>
+    <histo:Architectural_Pattern rdf:ID="Tumor_Vascular_Invasion">
+        <histo:hasXref rdf:resource="#UnificationXref_Tumor_Vascular_Invasion"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Vascular Invasion</histo:displayName>
+        <histo:present_Entity rdf:resource="#Renal_Vein2"/>
+        <histo:present_Entity rdf:resource="#Tumor3"/>
+        <histo:hasRelationship rdf:resource="#Relationship3"/>
+    </histo:Architectural_Pattern>
+
+
+    <!--Tumor Parenchyma Stroma-->
+    <histo:Tumor rdf:ID="Tumor1">
+		<histo:hasComponent rdf:resource="#Parenchyma1"/>
+		<histo:hasComponent rdf:resource="#Stroma1"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ccRCC Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Tumor rdf:ID="Tumor2">
+		<histo:hasComponent rdf:resource="#Parenchyma2"/>
+		<histo:hasComponent rdf:resource="#Stroma2"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ccRCC Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Tumor rdf:ID="Tumor3">
+		<histo:hasComponent rdf:resource="#Parenchyma3"/>
+		<histo:hasComponent rdf:resource="#Stroma3"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ccRCC Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Parenchyma rdf:ID="Parenchyma1">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma1">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+    <histo:Parenchyma rdf:ID="Parenchyma2">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma2">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+    <histo:Parenchyma rdf:ID="Parenchyma3">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma3">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+
+    
+    <!--Renal Sinus-->
+    <histo:NormalAnatomicalEntity rdf:ID="Renal_Sinus">
+        <histo:hasXref rdf:resource="#UnificationXref_Renal_Sinus"/>
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Sinus"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Sinus</histo:displayName>
+        <histo:hasAnatomicalEntity rdf:resource="#Renal_Vein1"/>
+        <histo:hasAnatomicalEntity rdf:resource="#Renal_Vein2"/>
+        <histo:hasAnatomicalEntity rdf:resource="#Adipose_Tissue"/>
+    </histo:NormalAnatomicalEntity>
+    
+
+    <!--Renal Vein-->
+    <histo:NormalAnatomicalEntity rdf:ID="Renal_Vein1">
+        <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Vein"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
+    </histo:NormalAnatomicalEntity>
+    <histo:NormalAnatomicalEntity rdf:ID="Renal_Vein2">
+        <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Vein"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
+    </histo:NormalAnatomicalEntity>
+    
+
+    <!--Adipose_Tissue-->
+    <histo:NormalAnatomicalEntity rdf:ID="Adipose_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Adipose_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
+    </histo:NormalAnatomicalEntity>
+    
+
+    <!--Relationship -->
+    <histo:Relationship rdf:ID="Relationship1">
+        <histo:hasXref rdf:resource="#UnificationXref_Extension"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Extension</histo:displayName>
+        <histo:object rdf:resource="#Renal_Sinus"/>
+        <histo:subject rdf:resource="#Tumor1"/>
+        <histo:subject rdf:resource="#Tumor2"/>
+    </histo:Relationship>    
+    <histo:Relationship rdf:ID="Relationship2">
+        <histo:hasXref rdf:resource="#UnificationXref_Extension"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Extension</histo:displayName>
+        <histo:object rdf:resource="#Renal_Vein1"/>
+        <histo:subject rdf:resource="#Tumor2"/>
+    </histo:Relationship>
+    <histo:Relationship rdf:ID="Relationship3">
+        <histo:hasXref rdf:resource="#UnificationXref_Invasion"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Invasion</histo:displayName>
+        <histo:object rdf:resource="#Renal_Vein2"/>
+        <histo:subject rdf:resource="#Tumor3"/>
+    </histo:Relationship>    
+    
+    
+    <!--EntityReference -->
+    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Sinus">
+        <histo:hasXref rdf:resource="#UnificationXref_Renal_Sinus"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Sinus</histo:displayName>
+    </histo:AnatomicalEntityReference>
+    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Vein">
+        <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
+    </histo:AnatomicalEntityReference>
+    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Adipose_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
+    </histo:AnatomicalEntityReference>
+    
+
+    <!--UnificationXref -->
+    <histo:UnificationXref rdf:ID="UnificationXref_Renal_Sinus">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_15611</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C18009</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Parenchyma">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000001</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Stroma">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000002</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Renal_Vein">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_14334</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Adipose_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_20110</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Extension">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C120271</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Invasion">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C20625</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Tumor_Vascular_Invasion">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C35939</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Tumor_Extension_into_Renal_Sinus">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000012</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Tumor_Extension_into_Segmental_Branches_of_Renal_Vein">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000013</histo:uri>
+    </histo:UnificationXref>
+</rdf:RDF>

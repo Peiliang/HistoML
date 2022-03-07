@@ -1,6 +1,0 @@
-SELECT ?stroma ?segmentation WHERE {
-    ?tumor rdf:type histo:Tumor ;
-        histo:hasComponent ?stroma .
-    ?stroma rdf:type histo:Stroma ;
-        histo:segmentation ?segmentation .
-}
