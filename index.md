@@ -16,6 +16,7 @@ Representation Examples
 - [Rhabdoid Cells](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation_Examples/Rhabdoid_cells)
 - [Alveolar Pattern](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation_Examples/Alveolar_pattern)
 - [Tumors Extending into Renal Sinus](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation_Examples/Tumors_extending_into_renal_sinus)
+- [Papillary thyroid cancer](https://github.com/Peiliang/HistoML/tree/master/Specification/Level1/Representation_Examples/Papillary%20thyroid%20cancer)
 
 Use Cases
 
