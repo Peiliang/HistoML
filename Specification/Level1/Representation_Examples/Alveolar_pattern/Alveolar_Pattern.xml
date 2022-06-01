@@ -1105,7 +1105,7 @@
 
 
 	<!--Blood Capillary -->
-    <histo:StromaAnatomicalEntity rdf:ID="Blood_Capillary">
+    <histo:Other_StromaEntity rdf:ID="Blood_Capillary">
         <histo:entityReference rdf:resource="#AnatomicalEntityReference_Blood_Capillary"/>
 		<histo:hasCell rdf:resource="#Endothelial_Cell1"/>
 		<histo:hasCell rdf:resource="#Endothelial_Cell2"/>
@@ -1155,7 +1155,7 @@
 		<histo:hasCell rdf:resource="#Erythrocyte14"/>
 		<histo:hasCell rdf:resource="#Erythrocyte15"/>        
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blood Capillary</histo:displayName>
-    </histo:StromaAnatomicalEntity>
+    </histo:Other_StromaEntity>
 
 
 	<!--Erythrocyte -->
@@ -1369,10 +1369,10 @@
         <histo:hasXref rdf:resource="#UnificationXref_Nucleolus"/>
 		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Nucleolus</histo:displayName>
     </histo:CellularComponentReference>
-	<histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Blood_Capillary">
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Blood_Capillary">
         <histo:hasXref rdf:resource="#UnificationXref_Blood_Capillary"/>
 		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Blood Capillary</histo:displayName>
-    </histo:AnatomicalEntityReference>
+    </histo:Other_AnatomicalEntityReference>
 	<histo:CellReference rdf:ID="CellReference_Endothelium_of_Capillary">
         <histo:hasXref rdf:resource="#UnificationXref_Endothelium_of_Capillary"/>
 		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Endothelium of Capillary</histo:displayName>

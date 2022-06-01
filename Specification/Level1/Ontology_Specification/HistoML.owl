@@ -5,11 +5,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is version 1.0  of the HistoML ontology. The goal of the HistoML group is to develop a common exchange format for histopathological features in histopathology data.  More information is available at https://histoml.com.</rdfs:comment>
     </owl:Ontology>
@@ -35,13 +31,13 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalAnatomicalEntity"/>
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity"/>
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaAnatomicalEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_StromaEntity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverse property of &apos;hasMorphologicStructure&apos;</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverse property of &apos;hasAnatomicalEntity&apos;.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -51,7 +47,7 @@
     <owl:ObjectProperty rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#anatomicalEntityReferenceOf">
         <rdfs:subPropertyOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#compoenentReferenceOf"/>
         <owl:inverseOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#hasAnatomicalEntityReference"/>
-        <rdfs:domain rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#AnatomicalEntityReference"/>
+        <rdfs:domain rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -206,13 +202,13 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalAnatomicalEntity"/>
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity"/>
-                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaAnatomicalEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity"/>
+                    <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_StromaEntity"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used to define morphologic structures in cells, their cellular components or the components of the parenchyma, stroma and other normal regions.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If an entity has a tissue, an organ part or an immaterial morphological structure as one of its components, &quot;hasAnatomicalEntity&quot; is used to link the entity to this component.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -221,7 +217,7 @@
 
     <owl:ObjectProperty rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#hasAnatomicalEntityReference">
         <rdfs:subPropertyOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#hasComponentReference"/>
-        <rdfs:range rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#AnatomicalEntityReference"/>
+        <rdfs:range rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference"/>
     </owl:ObjectProperty>
     
 
@@ -248,7 +244,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used to define cells of the stroma components or components of the normal regions.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If an entity has a cell as one of its components, &quot;hasCell&quot; is used to link the entity to this cell.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -817,18 +813,6 @@
     
 
 
-    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#AnatomicalEntityReference -->
-
-    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#AnatomicalEntityReference">
-        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#EntityReference"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#CellReference"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#CellularComponentReference"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#SubstanceReference"/>
-        <rdfs:comment>Used to store shared information about a set of related tissues or morphologic structures differing in states.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Architectural_Pattern -->
 
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Architectural_Pattern">
@@ -836,6 +820,7 @@
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Cellular_Appearances"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Product_or_Reserve"/>
         <rdfs:comment>Architectural_Pattern describes histologic patterns of cell populations and tumor behaviors (e.g. extension, invasion) which are usually observed microscopically at medium and low power.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Morphologic Finding&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -845,8 +830,10 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#CellReference">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#EntityReference"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#CellularComponentReference"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#SubstanceReference"/>
         <rdfs:comment>Used to store shared information about a set of related cells differing in states.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Cell&quot; and &quot;Neoplastic Cell&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -861,8 +848,10 @@
                 <owl:allValuesFrom rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#CellularComponentReference"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#SubstanceReference"/>
         <rdfs:comment>Used to store shared information about a set of related cellular components differing in states.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;cellular_component&quot;and &quot;Neoplastic Cellular Component&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -873,6 +862,7 @@
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Phenotype"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Product_or_Reserve"/>
         <rdfs:comment>Cellular_Appearances describes a physical change of a cell or a subcellular structure which are usually observed microscopically at high power.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Cellular phenotype&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -920,6 +910,7 @@
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Relationship"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Xref"/>
         <rdfs:comment>An attribute of a physical entity that can be changed while the entity still retains its biological identity. Entity attributes could also be generic across physical entities that are in a generic grouping. This allows generic attributes to be defined on a generic physical entity in EntityReference.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;quality&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -934,6 +925,7 @@
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Relationship"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Xref"/>
         <rdfs:comment>An entity reference is a grouping of several physical entities with multiple states that are often named and treated as a single entity by pathologists. EntityReference instances store the information common to a set of entities in various states. For example, the morphology of a tumor cell of clear cell renal cell carcinoma (ccRCC) undergoes changes as it evolves including nuclear changes, cytoplasmic changes; any ccRCC tumor cell in one of the states is represented as an individual of NeoplasticCell while a generic ccRCC tumor cell is represented as an individual of CellReference (child of EntityReference). The EntityReference is important because it explicitly links multiple physical entities representing different states of a generic entity, which would otherwise be difficult to recognize as related.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Anatomical entity&quot; and &quot;Neoplastic Entity&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -956,8 +948,9 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NeoplasticCell">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Parenchyma"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NeoplasticCellularComponent"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An instance of NeoplasticCell refers to a tumor cell.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Neoplastic Cell&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -978,32 +971,9 @@
                 <owl:allValuesFrom rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NeoplasticCellularComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An instance of NeoplasticCellularComponent refers to one of the cellular components of a tumor cell.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalAnatomicalEntity -->
-
-    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalAnatomicalEntity">
-        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#hasMemberPhysicalEntity"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalAnatomicalEntity"/>
-                            <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCell"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCell"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCellularComponent"/>
-        <rdfs:comment>Tissues and morphological structures in the normal regions are represented using NormalAnatomicalEntity.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Neoplastic Cellular Component&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1013,7 +983,9 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCell">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalEntity"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCellularComponent"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity"/>
         <rdfs:comment>Cells in the normal regions are represented using NormalCell.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Cell&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1034,7 +1006,9 @@
                 <owl:allValuesFrom rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCellularComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity"/>
         <rdfs:comment>Cellular components of the cells in the normal regions are represented using NormalCellularComponent.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;cellular_component&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1045,7 +1019,62 @@
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#PhysicalEntity"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Substance"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Tumor"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NormalEntity is used to describe normal cells and their cellular components and tissues and morphologic structures in the normal regions other than tumors.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NormalEntity is used to describe normal cells, their cellular components, normal tissues, parts of normal tissues, parts of organs, acellular structures and immaterial morphological structures (e.g. cavity or duct) in the normal regions other than tumors.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Normal anatomical entity&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference -->
+
+    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_AnatomicalEntityReference">
+        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#EntityReference"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#SubstanceReference"/>
+        <rdfs:comment>Used to store shared information about a set of related tissues, parts of organs or immaterial morphologic structures differing in states.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Anatomical space&quot;, &quot;Cardinal organ part&quot;, &quot;Cardinal tissue part&quot;, &quot;Tumor Stroma&quot; and &quot;Tumor Parenchyma&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity -->
+
+    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity">
+        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#hasMemberPhysicalEntity"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#NormalCell"/>
+                            <rdf:Description rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_NormalEntity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normal tissues, parts of normal tissues, parts of organs, acellular structures and immaterial morphological structures (e.g. cavity or duct) in the normal regions are represented using Other_NormalEntity.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Other_NormalEntity&quot; as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity -->
+
+    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_ParenchymaEntity">
+        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Parenchyma"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other_ParenchymaEntity is used to describe immaterial morphologic structures within tumor cells like scattered small cystic spaces in the cytoplasm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_StromaEntity -->
+
+    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Other_StromaEntity">
+        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Stroma"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaCell"/>
+        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaCellularComponent"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Within the stroma, other than cells and their cellular components, there are tissues which are induced by the tumor, such as blood vessels and fibers;  moreover, there are immaterial morphological structures which are phenotypically meaningful, such as cavity or duct. These entities should be represented using Other_StromaEntity,</rdfs:comment>
     </owl:Class>
     
 
@@ -1055,16 +1084,8 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Parenchyma">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Tumor"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Stroma"/>
-        <rdfs:comment>The parenchyma of a tumor is one of the two distinct compartments in a tumor; the other compartment is the stroma. The parenchyma is made up of neoplastic cells. Neoplastic cells and morphologic structures in the parenchyma are described using Parenchyma. Parenchyma has three child classes which are NeoplasticCell, NeoplasticCellularComponent and ParenchymaAnatomicalEntity.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity -->
-
-    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#ParenchymaAnatomicalEntity">
-        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Parenchyma"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParenchymaAnatomicalEntity is used to describe morphologic changes within tumor cells like scattered small cystic spaces in the cytoplasm.</rdfs:comment>
+        <rdfs:comment>The parenchyma of a tumor is one of the two distinct compartments in a tumor; the other compartment is the stroma. The parenchyma is made up of neoplastic cells. Neoplastic cells in the parenchyma are described using this class. It has three child classes which are NeoplasticCell, NeoplasticCellularComponent and Other_ParenchymaEntity.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Tumor Parenchyma&quot; from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1074,6 +1095,7 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Phenotype">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Entity"/>
         <rdfs:comment>Phenotype class in HistoML is used to represent microscopic physical changes in slides that prompt pathologists to look more closely, typically the ones suggesting malignancy. Phenotype class has three subclasses, Cellular_Appearances, Product_or_Reserve and Architecturel_Pattern, covering all different levels of phenotypes in a slide. Cellular_Appearances and Product_or_Reserve are used to describe a physical change of a cell or a subcellular structure observed microscopically at high power. Architecturel_Pattern is used to describe histologic patterns of cell populations and tumor behaviors (e.g. extension, invasion) which are usually observed at medium and low power. In HistoML, a phenotype is represented in which each of the individual components is described, including their properties (e.g. size, length), relationships (e.g. membership) and behaviors (e.g. invasion).</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Microscopic Finding&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1082,7 +1104,8 @@
 
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#PhysicalEntity">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Entity"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhysicalEntity class is used to represent microscopically observable entities in a slide. According to their different types, PhysicalEntity has several subclasses covering cells, cellular components, substances (e.g. product or reserve of a cell), tissues and other anatomical structures (e.g. a cavity or duct). It&apos;s further categorized into ‘NormalEntity’ and ‘Tumor’ based on whether an entity is neoplastic or induced by tumor or not (e.g. blood vessels induced by tumor belong to ‘Tumor’ instead of ‘NormalEntity’).</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PhysicalEntity class is used to represent microscopically observable entities in a slide. According to their different types, PhysicalEntity has several subclasses covering cells, cellular components, substances (e.g. product or reserve of a cell), tissues, parts of organs (e.g. the glomerulus of the kidney) and immaterial morphological structures(e.g. a cavity or duct). PhysicalEntity is categorized into ‘NormalEntity’ and ‘Tumor’ based on whether an entity is neoplastic or induced by tumor or not (e.g. blood vessels induced by tumor belong to ‘Tumor’ instead of ‘NormalEntity’).</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of PhysicalEntity, HistoML recommends using &quot;Anatomical Entity&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1136,6 +1159,7 @@
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Utility"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Xref"/>
         <rdfs:comment>The relationships between entities. The relationships are represented as triple. The head entity and tail entity are represented using subject and object respectively.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Qualifier&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1163,18 +1187,8 @@
 
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Stroma">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Tumor"/>
-        <rdfs:comment>Tumor stroma is primarily composed of the basement membrane, fibroblasts, extracellular matrix, immune cells, and blood vessels. Cells, components and morphologic changes existed in the stroma should be described using Stroma. Stroma has three child classes which are StromaAnatomicalEntity, StromaCell, StromaCellularComponent.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaAnatomicalEntity -->
-
-    <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaAnatomicalEntity">
-        <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Stroma"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaCell"/>
-        <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#StromaCellularComponent"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Within the stroma, other than cells and their cellular components, any tissue which has a biological function, such as blood vessels and fibers, should be represented using StromaAnatomicalEntity, as well as other morphological structures, which are phenotypically meaningful while don’t have a biological function or its function is not clear such as cavity or duct.</rdfs:comment>
+        <rdfs:comment>Tumor stroma is primarily composed of the basement membrane, fibroblasts, extracellular matrix, immune cells, and blood vessels. Cells and their cellular components, tissues and morphologic structures existed in the stroma should be described using this class. Stroma has three child classes which are StromaCell, StromaCellularComponent, Other_StromaEntity.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Tumor Stroma&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1204,6 +1218,7 @@
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#PhysicalEntity"/>
         <owl:disjointWith rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Tumor"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Substance is used to describe any chemical substance including a cell’s product or reserve.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Biological macromolecule&quot; and “Portion of body substance” as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1219,6 +1234,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Used to store shared information about a set of related substance differing states such as protein molecules encoded by the same gene.</rdfs:comment>
+        <rdfs:comment>When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Biological macromolecule&quot; and “Portion of body substance” as well as their sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 
@@ -1228,6 +1244,7 @@
     <owl:Class rdf:about="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#Tumor">
         <rdfs:subClassOf rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#PhysicalEntity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor refers to a benign or malignant pathologic structure in any part of the body, resulting from a neoplastic accumulation of cells.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When defining the external cross-references of the instances of this class, HistoML recommends using &quot;Tumor Tissue Sample&quot; as well as its sub-classes from Histopathology Ontology.</rdfs:comment>
     </owl:Class>
     
 

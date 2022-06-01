@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:histo="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="https://histoml-1308125782.cos.ap-chengdu.myqcloud.com/HistoML.owl"/>
+    </owl:Ontology>
+
+
+
+	<!--Slide -->
+	<histo:Slide rdf:ID="PTC_Slide">
+		<histo:magnification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40x</histo:magnification>
+	</histo:Slide>
+
+
+	<!--Normal Entity -->
+	<histo:Other_NormalEntity rdf:ID="Thyroid_Gland_Tissue">
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Thyroid_Gland_Tissue"/>
+		<histo:hasAnatomicalEntity rdf:resource="#Thyroid_Follicle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Gland Tissue</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Thyroid_Gland_Tissue"/>
+	</histo:Other_NormalEntity>
+	<histo:Other_NormalEntity rdf:ID="Thyroid_Follicle">
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Thyroid_Follicle"/>
+		<histo:hasCell rdf:resource="#Thyroid_Follicular_Cell"/>
+		<histo:hasProduct rdf:resource="#Colloid_Of_Thyroid_Follicle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Follicle</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Thyroid_Follicle"/>
+	</histo:Other_NormalEntity>
+	<histo:NormalCell rdf:ID="Thyroid_Follicular_Cell">
+		<histo:entityReference rdf:resource="#CellReference_Thyroid_Follicular_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Follicular Cell</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Thyroid_Follicular_Cell"/>
+	</histo:NormalCell>
+	<histo:Substance rdf:ID="Colloid_Of_Thyroid_Follicle">
+		<histo:entityReference rdf:resource="#SubstanceReference_Colloid_Of_Thyroid_Follicle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colloid Of Thyroid Follicle</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Colloid_Of_Thyroid_Follicle"/>
+	</histo:Substance>
+	<histo:Other_NormalEntity rdf:ID="Skeletal_Muscle">
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Skeletal_Muscle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skeletal Muscle</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Skeletal_Muscle"/>
+	</histo:Other_NormalEntity>
+	<histo:Other_NormalEntity rdf:ID="Thyroid_Artery">
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Thyrocervical_Artery"/>
+		<histo:hasAnatomicalEntity rdf:resource="#Wall_of_Thyroid_Artery"/>
+		<histo:hasAnatomicalEntity rdf:resource="#Cavity_of_Thyroid_Artery"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Artery</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Thyrocervical_Artery"/>
+	</histo:Other_NormalEntity>
+	<histo:Other_NormalEntity rdf:ID="Wall_of_Thyroid_Artery">
+		<histo:hasCell rdf:resource="#Smooth_Muscle_Cell1"/>
+		<histo:hasCell rdf:resource="#Smooth_Muscle_Cell2"/>
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Thyrocervical_Artery"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wall of Thyroid Artery</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Wall_of_Thyroid_Artery"/>
+	</histo:Other_NormalEntity>
+	<histo:Other_NormalEntity rdf:ID="Cavity_of_Thyroid_Artery">
+		<histo:hasCell rdf:resource="#Erythrocyte1"/>
+		<histo:hasCell rdf:resource="#Erythrocyte2"/>
+		<histo:hasCell rdf:resource="#Erythrocyte3"/>
+		<histo:hasCell rdf:resource="#Erythrocyte4"/>
+		<histo:hasCell rdf:resource="#Erythrocyte5"/>
+		<histo:entityReference rdf:resource="#AnatomicalEntityReference_Cavity"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity of Thyroid Artery</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Cavity"/>
+	</histo:Other_NormalEntity>
+    <histo:Other_NormalEntity rdf:ID="Adipose_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Adipose_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
+    </histo:Other_NormalEntity>
+
+    <!--Tumor -->
+	<histo:Tumor rdf:ID="Tumor">
+		<histo:hasComponent rdf:resource="#Parenchyma"/>
+		<histo:hasComponent rdf:resource="#Stroma"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Region of Papillary Thyroid Cancer</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Parenchyma rdf:ID="Parenchyma">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma">
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+
+
+	<histo:Tumor rdf:ID="Tumor1">
+		<histo:hasComponent rdf:resource="#Parenchyma1"/>
+		<histo:hasComponent rdf:resource="#Stroma1"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Region of Papillary Thyroid Cancer</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Parenchyma rdf:ID="Parenchyma1">
+		<histo:hasCell rdf:resource="#PTC_Cell1"/>
+		<histo:hasCell rdf:resource="#PTC_Cell2"/>
+		<histo:hasCell rdf:resource="#PTC_Cell3"/>
+		<histo:hasCell rdf:resource="#PTC_Cell4"/>
+		<histo:hasCell rdf:resource="#PTC_Cell5"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma1">
+		<histo:hasAnatomicalEntity rdf:resource="#Fibrous_Tissue"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+
+
+
+	<histo:Tumor rdf:ID="Tumor2">
+		<histo:hasComponent rdf:resource="#Parenchyma2"/>
+		<histo:hasComponent rdf:resource="#Stroma2"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Region of Papillary Thyroid Cancer</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Parenchyma rdf:ID="Parenchyma2">
+		<histo:hasCell rdf:resource="#PTC_Cell6"/>
+		<histo:hasCell rdf:resource="#PTC_Cell7"/>
+		<histo:hasCell rdf:resource="#PTC_Cell8"/>
+		<histo:hasCell rdf:resource="#PTC_Cell9"/>
+		<histo:hasCell rdf:resource="#PTC_Cell10"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma2">
+		<histo:hasAnatomicalEntity rdf:resource="#Blood_Capillary"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+
+
+	<histo:Tumor rdf:ID="Tumor3">
+		<histo:hasComponent rdf:resource="#Parenchyma3"/>
+		<histo:hasComponent rdf:resource="#Stroma3"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Region of Papillary Thyroid Cancer</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Tissue"/>
+	</histo:Tumor>
+    <histo:Parenchyma rdf:ID="Parenchyma3">
+		<histo:hasCell rdf:resource="#PTC_Cell11"/>
+		<histo:hasCell rdf:resource="#PTC_Cell12"/>
+		<histo:hasCell rdf:resource="#PTC_Cell13"/>
+		<histo:hasCell rdf:resource="#PTC_Cell14"/>
+		<histo:hasCell rdf:resource="#PTC_Cell15"/>
+		<histo:hasCell rdf:resource="#PTC_Cell16"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parenchyma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Parenchyma"/>
+	</histo:Parenchyma>
+	<histo:Stroma rdf:ID="Stroma3">
+		<histo:hasProduct rdf:resource="#Colloid_Of_Follicular_Pattern"/>
+		<histo:hasAnatomicalEntity rdf:resource="#Cavity"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stroma of The Tumor Region</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Tumor_Stroma"/>
+	</histo:Stroma>
+	
+
+	<!--Phenotype -->
+	<histo:Architectural_Pattern rdf:ID="Phenotype1"> 
+        <histo:present_Entity rdf:resource="#Tumor1"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papillary Pattern</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Papillary_Pattern"/>
+    </histo:Architectural_Pattern>
+	<histo:Architectural_Pattern rdf:ID="Phenotype2"> 
+        <histo:present_Entity rdf:resource="#Tumor2"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papillary Pattern</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Papillary_Pattern"/>
+    </histo:Architectural_Pattern>
+	<histo:Architectural_Pattern rdf:ID="Phenotype3"> 
+        <histo:present_Entity rdf:resource="#Tumor3"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follicular Pattern</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXre_Follicular_Pattern"/>
+    </histo:Architectural_Pattern>
+	<histo:Cellular_Appearances rdf:ID="Phenotype4">
+		<histo:present_Entity rdf:resource="#PTC_Cell15"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear Groove</histo:displayName>
+		<histo:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear Groove</histo:name>
+        <histo:hasXref rdf:resource="#UnificationXref_Nuclear_Groove"/>
+    </histo:Cellular_Appearances>
+	<histo:Cellular_Appearances rdf:ID="Phenotype5">
+		<histo:present_Entity rdf:resource="#PTC_Cell16"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear Pseudoinclusion</histo:displayName>
+		<histo:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear Pseudoinclusion</histo:name>
+        <histo:hasXref rdf:resource="#UnificationXref_Nuclear_Pseudoinclusion"/>
+    </histo:Cellular_Appearances>
+    <histo:Architectural_Pattern rdf:ID="Phenotype6">
+        <histo:hasXref rdf:resource="#UnificationXref_Tumor_Extension_into_Skeletal_Muscle"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Extension into Skeletal Muscle</histo:displayName>
+        <histo:present_Entity rdf:resource="#Skeletal_Muscle"/>
+        <histo:present_Entity rdf:resource="#Tumor"/>
+        <histo:hasRelationship rdf:resource="#Relationship"/>
+    </histo:Architectural_Pattern>
+
+
+
+	<!--Cell -->
+	<histo:NeoplasticCell rdf:ID="PTC_Cell1">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus1"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm1"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell2">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus2"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm2"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell3">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus3"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm3"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell4">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus4"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm4"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell5">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus5"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm5"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell6">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus6"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm6"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell7">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus7"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm7"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell8">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus8"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm8"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell9">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus9"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm9"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell10">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus10"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm10"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell11">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus11"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm11"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell12">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus12"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm12"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell13">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus13"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm13"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell14">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus14"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm14"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell15">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus15"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm15"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+	<histo:NeoplasticCell rdf:ID="PTC_Cell16">
+		<histo:entityReference rdf:resource="#CellReference_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nucleus16"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm16"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCell>
+
+
+	<!--Nucleus -->
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus1">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus2">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus3">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus4">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus5">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus6">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus7">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus8">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus9">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus10">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus11">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus12">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus13">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus14">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus15">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Nuclear_Membrane15"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nucleus16">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:hasCellularComponent rdf:resource="#PTC_Cell_Cytoplasm17"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nucleus_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+
+
+	<!--Nuclear Membrane -->
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Nuclear_Membrane15">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nuclear_Membrane"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Nuclear_Membrane_of_Neoplastic_Cell"/>
+		<histo:hasAttribute rdf:resource="#EntityAttribute_Wrinkled"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear Membrane of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+
+	<!--Cytoplasm -->
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm1">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm2">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm3">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm4">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm5">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm6">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+		<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm7">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm8">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm9">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm10">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm11">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm12">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm13">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm14">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm15">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm16">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm of Neoplastic Cell of Papillary thyroid tumor</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+	<histo:NeoplasticCellularComponent rdf:ID="PTC_Cell_Cytoplasm17">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Cytoplasm"/>
+		<histo:hasXref rdf:resource="#UnificationXref_Cytoplasm_of_Neoplastic_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An invaginated Cytoplasm into the Nucleus</histo:displayName>
+	</histo:NeoplasticCellularComponent>
+
+
+
+	<!--Erythrocyte -->
+	<histo:NormalCell rdf:ID="Erythrocyte1">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCell rdf:ID="Erythrocyte2">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCell rdf:ID="Erythrocyte3">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCell rdf:ID="Erythrocyte4">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCell rdf:ID="Erythrocyte5">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:NormalCell>
+	<histo:StromaCell rdf:ID="Erythrocyte6">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:StromaCell>
+	<histo:StromaCell rdf:ID="Erythrocyte7">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:StromaCell>
+	<histo:StromaCell rdf:ID="Erythrocyte8">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:StromaCell>
+	<histo:StromaCell rdf:ID="Erythrocyte9">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:StromaCell>
+	<histo:StromaCell rdf:ID="Erythrocyte10">
+		<histo:entityReference rdf:resource="#CellReference_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erythrocyte</histo:displayName>
+	</histo:StromaCell>
+
+
+	<!--Smooth Muscle Cell -->
+	<histo:NormalCell rdf:ID="Smooth_Muscle_Cell1">
+		<histo:entityReference rdf:resource="#CellReference_Smooth_Muscle_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#Nucleus_of_Smooth_Muscle_Cell1"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smooth Muscle Cell</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCell rdf:ID="Smooth_Muscle_Cell2">
+		<histo:entityReference rdf:resource="#CellReference_Smooth_Muscle_Cell"/>
+		<histo:hasCellularComponent rdf:resource="#Nucleus_of_Smooth_Muscle_Cell2"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smooth Muscle Cell</histo:displayName>
+	</histo:NormalCell>
+	<histo:NormalCellularComponent rdf:ID="Nucleus_of_Smooth_Muscle_Cell1">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smooth Muscle Cell</histo:displayName>
+	</histo:NormalCellularComponent>
+	<histo:NormalCellularComponent rdf:ID="Nucleus_of_Smooth_Muscle_Cell2">
+		<histo:entityReference rdf:resource="#CellularComponentReference_Nucleus"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smooth Muscle Cell</histo:displayName>
+	</histo:NormalCellularComponent>
+
+
+	<!--Fibrous_Tissue -->
+    <histo:Other_StromaEntity rdf:ID="Fibrous_Tissue">
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Fibrous_Tissue"/>  
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fibrous Tissue</histo:displayName>
+    </histo:Other_StromaEntity>
+
+
+	<!--Blood Capillary -->
+	<histo:Other_StromaEntity rdf:ID="Blood_Capillary">
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Blood_Capillary"/>
+		<histo:hasCell rdf:resource="#Erythrocyte6"/>
+		<histo:hasCell rdf:resource="#Erythrocyte7"/>
+		<histo:hasCell rdf:resource="#Erythrocyte8"/>
+		<histo:hasCell rdf:resource="#Erythrocyte9"/>
+		<histo:hasCell rdf:resource="#Erythrocyte10"/>       
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blood Capillary</histo:displayName>
+    </histo:Other_StromaEntity>
+
+
+	<!--Colloid of Follicular Pattern -->
+	<histo:Substance rdf:ID="Colloid_Of_Follicular_Pattern">
+		<histo:entityReference rdf:resource="#SubstanceReference_Colloid_Of_Thyroid_Follicle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colloid Of Follicular Pattern</histo:displayName>
+		<histo:hasXref rdf:resource="#UnificationXref_Colloid_Of_Thyroid_Follicle"/>
+	</histo:Substance>
+
+	
+	<!--Cavity of Follicular Pattern -->
+    <histo:Other_StromaEntity rdf:ID="Cavity">
+        <histo:entityReference rdf:resource="#AnatomicalEntityReference_Cavity"/>  
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavity of Follicular Pattern</histo:displayName>
+    </histo:Other_StromaEntity>
+
+
+
+	<!--EntityReference -->
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Thyroid_Gland_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Thyroid_Gland_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Gland Tissue</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Thyroid_Follicle">
+        <histo:hasXref rdf:resource="#UnificationXref_Thyroid_Follicle"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Follicle</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Skeletal_Muscle">
+        <histo:hasXref rdf:resource="#UnificationXref_Skeletal_Muscle"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skeletal Muscle</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Cavity">
+        <histo:hasXref rdf:resource="#UnificationXref_Cavity"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anatomical Cavity</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:CellReference rdf:ID="CellReference_Thyroid_Follicular_Cell">
+        <histo:hasXref rdf:resource="#UnificationXref_Thyroid_Follicular_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thyroid Follicular Cell</histo:displayName>
+    </histo:CellReference>
+	<histo:SubstanceReference rdf:ID="SubstanceReference_Colloid_Of_Thyroid_Follicle">
+        <histo:hasXref rdf:resource="#UnificationXref_Colloid_Of_Thyroid_Follicle"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Colloid Of Thyroid Follicle</histo:displayName>
+    </histo:SubstanceReference>
+    <histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Adipose_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+    <histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Fibrous_Tissue">
+        <histo:hasXref rdf:resource="#UnificationXref_Fibrous_Tissue"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fibrous Tissue</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Blood_Capillary">
+        <histo:hasXref rdf:resource="#UnificationXref_Blood_Capillary"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Blood Capillary</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Thyrocervical_Artery">
+        <histo:hasXref rdf:resource="#UnificationXref_Blood_Capillary"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Thyrocervical Artery</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Wall_of_Artery">
+        <histo:hasXref rdf:resource="#UnificationXref_Wall_of_Thyroid_Artery"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Wall of Artery</histo:displayName>
+    </histo:Other_AnatomicalEntityReference>
+	<histo:CellReference rdf:ID="CellReference_Smooth_Muscle_Cell">
+        <histo:hasXref rdf:resource="#UnificationXref_Smooth_Muscle_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Smooth Muscle Cell</histo:displayName>
+    </histo:CellReference>
+	<histo:CellReference rdf:ID="CellReference_Cell">
+        <histo:hasXref rdf:resource="#UnificationXref_Cell"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell</histo:displayName>
+    </histo:CellReference>
+	<histo:CellularComponentReference rdf:ID="CellularComponentReference_Nucleus">
+        <histo:hasXref rdf:resource="#UnificationXref_Nucleus"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleus</histo:displayName>
+    </histo:CellularComponentReference>
+	<histo:CellularComponentReference rdf:ID="CellularComponentReference_Cytoplasm">
+        <histo:hasXref rdf:resource="#UnificationXref_Cytoplasm"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytoplasm</histo:displayName>
+    </histo:CellularComponentReference>
+	<histo:CellularComponentReference rdf:ID="CellularComponentReference_Nucleolus">
+        <histo:hasXref rdf:resource="#UnificationXref_Nucleolus"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Nucleolus</histo:displayName>
+    </histo:CellularComponentReference>
+	<histo:CellReference rdf:ID="CellReference_Erythrocyte">
+        <histo:hasXref rdf:resource="#UnificationXref_Erythrocyte"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Erythrocyte</histo:displayName>
+    </histo:CellReference>	
+	<histo:CellularComponentReference rdf:ID="CellularComponentReference_Nuclear_Membrane">
+        <histo:hasXref rdf:resource="#UnificationXref_Nuclear_Membrane"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string" >Nuclear Membrane</histo:displayName>
+    </histo:CellularComponentReference>
+
+
+	<!--EntityAttribute -->
+	<histo:EntityAttribute rdf:ID="EntityAttribute_Wrinkled">
+        <histo:hasXref rdf:resource="#UnificationXref_Wrinkled"/>
+		<histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrinkled</histo:displayName>
+		<histo:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grooved texture quality inhering in a bearer by virtue of the bearer's being marked by one or more creases in a normally smooth surface</histo:comment>
+    </histo:EntityAttribute>
+
+
+    <!--Relationship -->
+    <histo:Relationship rdf:ID="Relationship">
+        <histo:hasXref rdf:resource="#UnificationXref_Infiltration"/>
+        <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumor Infiltration</histo:displayName>
+        <histo:object rdf:resource="#Skeletal_Muscle"/>
+        <histo:subject rdf:resource="#Tumor"/>
+    </histo:Relationship>
+
+
+
+	<!--Xref -->
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C18009</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Parenchyma">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000001</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Stroma">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000002</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Thyroid_Gland_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C33785</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Thyroid_Follicle">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_68805</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Thyroid_Follicular_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_68782</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Colloid_Of_Thyroid_Follicle">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_68831</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Skeletal_Muscle">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_14069</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Adipose_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_20110</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Fibrous_Tissue">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_63898</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Blood_Capillary">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_63194</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Cavity">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_57479</histo:uri>
+    </histo:UnificationXref>
+    <histo:UnificationXref rdf:ID="UnificationXref_Papillary_Pattern">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C35911</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXre_Follicular_Pattern">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000062</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nuclear_Groove">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C47829</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nuclear_Pseudoinclusion">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C47827</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Erythrocyte">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_62845</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Thyrocervical_Artery">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_70346</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Wall_of_Thyroid_Artery">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_14155</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Smooth_Muscle_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_14072</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/FMA_68646</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nucleus">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/GO_0005634</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Cytoplasm">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/GO_0005737</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nucleolus">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/GO_0005730</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nuclear_Membrane">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/GO_0031965</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Neoplastic_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C12922</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nucleus_of_Neoplastic_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000006</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Cytoplasm_of_Neoplastic_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000004</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nucleolus_of_Neoplastic_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000005</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Nuclear_Membrane_of_Neoplastic_Cell">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000063</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Wrinkled">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/PATO_0001810</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Tumor_Extension_into_Skeletal_Muscle">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.aipath.com/histo/HISTO_0000064</histo:uri>
+    </histo:UnificationXref>
+	<histo:UnificationXref rdf:ID="UnificationXref_Infiltration">
+        <histo:uri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C20625</histo:uri>
+    </histo:UnificationXref>
+</rdf:RDF>
+
+    
+    
+    
+    
+    
+    

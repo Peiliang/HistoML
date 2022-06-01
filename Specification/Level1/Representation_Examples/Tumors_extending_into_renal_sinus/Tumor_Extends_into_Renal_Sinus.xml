@@ -80,35 +80,35 @@
 
     
     <!--Renal Sinus-->
-    <histo:NormalAnatomicalEntity rdf:ID="Renal_Sinus">
+    <histo:Other_NormalEntity rdf:ID="Renal_Sinus">
         <histo:hasXref rdf:resource="#UnificationXref_Renal_Sinus"/>
         <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Sinus"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Sinus</histo:displayName>
         <histo:hasAnatomicalEntity rdf:resource="#Renal_Vein1"/>
         <histo:hasAnatomicalEntity rdf:resource="#Renal_Vein2"/>
         <histo:hasAnatomicalEntity rdf:resource="#Adipose_Tissue"/>
-    </histo:NormalAnatomicalEntity>
+    </histo:Other_NormalEntity>
     
 
     <!--Renal Vein-->
-    <histo:NormalAnatomicalEntity rdf:ID="Renal_Vein1">
+    <histo:Other_NormalEntity rdf:ID="Renal_Vein1">
         <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
         <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Vein"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
-    </histo:NormalAnatomicalEntity>
-    <histo:NormalAnatomicalEntity rdf:ID="Renal_Vein2">
+    </histo:Other_NormalEntity>
+    <histo:Other_NormalEntity rdf:ID="Renal_Vein2">
         <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
         <histo:entityReference rdf:resource="#AnatomicalEntityReference_Renal_Vein"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
-    </histo:NormalAnatomicalEntity>
+    </histo:Other_NormalEntity>
     
 
     <!--Adipose_Tissue-->
-    <histo:NormalAnatomicalEntity rdf:ID="Adipose_Tissue">
+    <histo:Other_NormalEntity rdf:ID="Adipose_Tissue">
         <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
         <histo:entityReference rdf:resource="#AnatomicalEntityReference_Adipose_Tissue"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
-    </histo:NormalAnatomicalEntity>
+    </histo:Other_NormalEntity>
     
 
     <!--Relationship -->
@@ -134,18 +134,18 @@
     
     
     <!--EntityReference -->
-    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Sinus">
+    <histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Sinus">
         <histo:hasXref rdf:resource="#UnificationXref_Renal_Sinus"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Sinus</histo:displayName>
-    </histo:AnatomicalEntityReference>
-    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Vein">
+    </histo:Other_AnatomicalEntityReference>
+    <histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Renal_Vein">
         <histo:hasXref rdf:resource="#UnificationXref_Renal_Vein"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renal Vein</histo:displayName>
-    </histo:AnatomicalEntityReference>
-    <histo:AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Adipose_Tissue">
+    </histo:Other_AnatomicalEntityReference>
+    <histo:Other_AnatomicalEntityReference rdf:ID="AnatomicalEntityReference_Adipose_Tissue">
         <histo:hasXref rdf:resource="#UnificationXref_Adipose_Tissue"/>
         <histo:displayName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipose Tissue</histo:displayName>
-    </histo:AnatomicalEntityReference>
+    </histo:Other_AnatomicalEntityReference>
     
 
     <!--UnificationXref -->
